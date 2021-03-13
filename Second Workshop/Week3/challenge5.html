@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheCodes Challenge</title>
+</head>
+<body>
+    <h1> 
+        Arrays and Loops
+    </h1>
+    <ul>
+        <li>Paris</li>
+        <li>Roma</li>
+        <li>Barcelona</li>
+        <li>Lisbon</li>
+    </ul>
+    
+    <script>
+        function showCity(cityElement) {
+            cityElement.innerHTML =
+            "<strong>" + cityElement.innerHTML + "<strong>");
+        }
+
+        function showCity(cityElement) {
+            console.log(cityElement.innerHTML);
+        }
+
+        let cities = document.querySelectorAll("li");
+        cities.forEach(showCity);
+
+
+
+
+        let cities1 = ["New York", "Paris", "Tokyo", "Sydney"];
+        let names = [];
+        // Arrays can be empty
+        cities[0]
+        // Equals New York b/c array begins at 0
+        cities.length 
+        // will tell you how big array is
+        cities[1] = "London";
+        // subs Paris by London
+        cities[4] = "Barcelona";
+        cities[4] 
+        // This will be Barcelona
+
+        function showCity(city) {
+            console.log(city);
+            // Show each city in log one by one
+            alert(city);
+            // Alert each city one by one
+        }
+
+        let cities = ["London", "Cape Town", "Berlin"];
+        console.log(cities);
+        // Lists all cities
+        console.log(cities[1])
+        // Lists Cape Town
+        cities.forEach(showCity);
+   
+
+    </script>
+</body>
+</html>

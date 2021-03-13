@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>   
+        JS Forms
+    </h1>
+    <h2>
+
+    </h2>
+        <form id="search-form"> 
+            <input type="text" placeholder="Search for a city" 
+            autocomplete="off" autofocus="on" id="search-text-input"/>
+            <input type="submit" value="Search" />
+        </form>
+        <h1>Forms</h1>
+  
+
+    <h3>Challenge 1</h3>
+    <p>When clicking this button, alert "Hooray!"</p>
+    <button id="special-button">Click me</button>
+    <h3>Challenge 2</h3>
+    <p>
+      When submitting the form, alert the value of the password input
+      <form id="password-form">
+        <input type="password" id="password-input" placeholder="Enter your password">
+        <input type="submit" value="Sign up">
+      </form>
+    </p>
+    <h3>Challenge 3</h3>
+    <p>
+        When submitting the form, alert the value of the username and email inputs
+        <form id="signup-form">
+          <input type="email" id="email-input" placeholder="Enter your email" required>
+          <input type="username" id="username-input" placeholder="Enter your username" required>
+          <input type="submit" value="Sign up" id="email-user-input">
+        </form>
+    </p>
+    
+    <script>
+        function search(event) {
+            event.preventDefault();
+            let searchInput = document.querySelector("#search-text-input");
+
+            console.log(searchInput.value);
+            let h2 = document.querySelector("h2");
+            if (searchInput.value) {
+                
+            h2.innerHTML = `Searching for ${searchInput.value}...`;
+            } else {
+                h2.innerHTML = null;
+                alert("Please type a city");
+            }
+
+            // alert("Searching");
+        }
+
+       let form = document.querySelector("#search-form");
+        form.addEventListener("submit", search);
+
+        // Challenge 1
+function clickButton() {
+  alert("Hooray!");
+}
+let button = document.querySelector("#special-button");
+button.addEventListener("click", clickButton);
+
+// Challenge 2
+function passwordInput(event) {
+  event.preventDefault();
+  let password = document.querySelector("#password-input");
+  if (password.value) {
+    alert("This is the password that was submitted: " + password.value);
+  } else {
+    password.value = null;
+    alert("Please enter a password!");
+  }
+}
+let passwordForm = document.querySelector("#password-form");
+passwordForm.addEventListener("submit", passwordInput);
+
+// Challenge 3
+function emailUserInput(event) {
+  event.preventDefault();
+  let email = document.querySelector("#email-input");
+  let userName = document.querySelector("#username-input");
+  if (email.value && userName.value) {
+    alert("This is the email that was submitted: " + email.value);
+    alert("This is the username that was submitted: " + userName.value);
+  }
+}
+let signUpForm = document.querySelector("#signup-form");
+signUpForm.addEventListener("submit", emailUserInput);
+
+    </script>
+</body>
+</html>

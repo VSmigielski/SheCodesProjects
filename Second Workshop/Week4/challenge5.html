@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        JS Function Return
+    </h1>
+    <script>
+        function isCold(temperature) {
+            return temperature <= 10;
+
+       //  if (temperature > 10) {
+       //     return false;
+       //  } else {
+       //     return true;
+       //  }
+       //  }
+
+        let temperature = prompt("What temperature is it today?");
+        if (isCold(temperature)) {
+            alert("It is cold today");
+        } else {
+        alert("It is warm today");
+        }
+    }
+    function isWindy(speed, unit) {
+  if (speed > 5 && unit === "metric") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+let speed = prompt("What is the wind speed?");
+let unit = prompt("In what unit? (metric or imperial");
+
+if (isWindy(speed, unit)) {
+  alert("It is windy");
+} else {
+  alert("It is not windy");
+}
+
+    </script>
+</body>
+</html>

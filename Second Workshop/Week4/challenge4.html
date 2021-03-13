@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greetUser(name) {
+            alert(`Welcome ${name}!`);
+        }
+
+        function welcomeUser(temperature, firstname) {
+            greetUser(firstname);
+        if (temperature > 15) {
+            alert("It is a warm day today, " + name);
+        } else {
+            alert("It is a cold day today, " + name);
+        }
+        }
+
+        let currentTemperature = 20;
+        welcomeUser(currentTemperature, "Matt");
+        welcomeUser(10, "John");
+        welcomeUser(20, "Anna");
+        welcomeUser(15, "Gio");
+    </script>
+</body>
+</html>
